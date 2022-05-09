@@ -1,0 +1,16 @@
+﻿@model WebService.Models.ViewModels.ErrorViewModel;
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">@ViewData["Title"]</h1>
+<h2 class="text-danger">@Model.Message</h2 
+<!-- antes tinha essa mensagem no h2 "An error occurred while processing your request. Foi trocada por message criada lá na ErrorViewModel-->
+@if (Model.ShowRequestId)
+{<!--teste se existe um REQUESTID-->
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+
